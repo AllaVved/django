@@ -1,0 +1,32 @@
+body {
+    background: #f8f8f8;
+    width: 95%;
+    margin: 0 auto;
+}
+.menu li{
+    display: inline-block;
+    list-style-type: none;
+    border: ridge;
+    text-transform: uppercase;
+}
+.menu li:first-child {
+    border-top-left-radius: 15px;
+}
+
+.menu li:last-child {
+    border-bottom-right-radius: 15px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu li:hover {
+    background: #ffffff;
+}
+.menu li:active {
+    background: #ccc;
+}
+.menu li a:active {
+    color: black
+}
