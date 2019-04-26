@@ -1,0 +1,38 @@
+body {
+    background: lightgray;
+    width: 85%;
+    margin: 0 auto;
+}
+.menu li{
+    display: inline-block;
+    list-style-type: none;
+    border: ridge;
+    text-transform: uppercase;
+}
+.menu li:first-child {
+    border-top-left-radius: 15px;
+}
+
+.menu li:last-child {
+    border-bottom-right-radius: 15px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu li:hover {
+    background: white;
+}
+.menu li:active {
+    background: darkgray;
+}
+.menu li a:active {
+    color: black
+}
+.active{
+    background: black;
+}
+.active a {
+    color: white;
+}
