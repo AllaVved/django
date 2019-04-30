@@ -27,7 +27,7 @@ body {
 .menu li:active {
     background: darkgray;
 }
-.menu li a:active {
+a:active {
     color: black
 }
 .active{
@@ -35,4 +35,17 @@ body {
 }
 .active a {
     color: white;
+}
+.products_menu a {
+    text-decoration: none;
+}
+.products_menu li{
+    list-style-type: none;
+    display: inline-block;
+    width: 30%;
+    border: ridge;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
 }

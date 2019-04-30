@@ -1,15 +1,12 @@
 {% extends 'mainapp/base.html' %}
-{% load static %}
+
 
 {% block title %}
     <title>Продукты</title>
 {% endblock %}
  
 {% block content %}
-    {% include 'mainapp/includes/inc_menu.html' %}
     <h1>Продукты</h1>
-    {% for item in prod %}
-    <h3>{{ item.name }}</h3>
-        <img src="{% static item.img %}">
-    {% endfor %}
+    {% include 'mainapp/includes/inc_categories_menu.html' %}
+
 {% endblock %}

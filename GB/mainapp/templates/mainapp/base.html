@@ -10,6 +10,23 @@
     {% endblock %}
 </head>
 <body>
+<ul class="menu">
+    <li class="{% if request.resolver_match.url_name == 'main' %}
+                        active
+                      {% endif %}">
+        <a href="{% url 'main' %}">домой</a>
+    </li>
+    <li class="{% if request.resolver_match.url_name == 'products' %}
+                        active
+                      {% endif %}">
+        <a href="{% url 'products' %}">продукты</a>
+    </li>
+    <li class="{% if request.resolver_match.url_name == 'contacts' %}
+                        active
+                      {% endif %}">
+        <a href="{% url 'contacts' %}">контакты</a>
+    </li>
+</ul>
     {% block content %}
     {% endblock %}
     {% block js %}

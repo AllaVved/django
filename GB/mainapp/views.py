@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product, ProductCategory
 
 
 def main(request):
@@ -6,12 +7,9 @@ def main(request):
     return render(request, 'mainapp/index.html', context)
 
 
-def products(request):
-    context = {'prod' : [
-        {'name' : 'Щенок пуделя', 'img' : 'img/poodle_puppy.jpg'},
-        {'name' : 'Утка с утенком', 'img' : 'img/duck_with_duckling.jpg'},
-        {'name' : 'Лама Белая', 'img' : 'img/white_llama.jpg'}
-    ]}
+def products(request, pk=None):
+    print(pk)
+    context = {'products' : Product.objects.all()}
     return render(request, 'mainapp/products.html', context)
 
 
