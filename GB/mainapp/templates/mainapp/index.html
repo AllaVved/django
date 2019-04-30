@@ -1,0 +1,11 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %}
+    <title>Главная</title>
+{% endblock %}
+
+{% block content %}
+     <h1>Главная</h1>
+    <div>Привет {{ user.name|title }}!!!</div>
+    {% now "d.m.Y" %}
+{% endblock %}
