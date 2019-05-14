@@ -1,0 +1,51 @@
+body {
+    background: lightgray;
+    width: 85%;
+    margin: 0 auto;
+}
+.menu li{
+    display: inline-block;
+    list-style-type: none;
+    border: ridge;
+    text-transform: uppercase;
+}
+.menu li:first-child {
+    border-top-left-radius: 15px;
+}
+
+.menu li:last-child {
+    border-bottom-right-radius: 15px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu li:hover {
+    background: white;
+}
+.menu li:active {
+    background: darkgray;
+}
+a:active {
+    color: black
+}
+.active{
+    background: black;
+}
+.active a {
+    color: white;
+}
+.products_menu a {
+    text-decoration: none;
+}
+.products_menu li{
+    list-style-type: none;
+    display: inline-block;
+    width: 30%;
+    border: ridge;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+}
