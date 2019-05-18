@@ -1,0 +1,44 @@
+[
+  {
+    "category": "Мягкие игрушки",
+    "name": "Щенок пуделя",
+    "price": 1000,
+    "quantity": 9
+  },
+  {
+    "category": "Мягкие игрушки",
+    "name": "Утка с утенком",
+    "price": 1500,
+    "quantity": 5
+  },
+    {
+    "category": "Куклы",
+    "name": "Маша",
+    "price": 1700,
+    "quantity": 5
+  },
+    {
+    "category": "Куклы",
+    "name": "Пупс Саша",
+    "price": 2000,
+    "quantity": 5
+  },
+    {
+    "category": "Машинки",
+    "name": "Джип",
+    "price": 1200,
+    "quantity": 5
+  },
+    {
+    "category": "Машинки",
+    "name": "Формула 1",
+    "price": 700,
+    "quantity": 5
+  },
+  {
+    "category": "Мягкие игрушки",
+    "name": "Лама Белая",
+    "price": 500,
+    "quantity": 11
+  }
+]
