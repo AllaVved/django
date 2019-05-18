@@ -1,0 +1,14 @@
+<ul class="products_menu">
+    {% for product in products %}
+        <li>
+            <a href="#">
+                <div>
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.short_desc }}</p>
+                    <a href="{% url 'basket:add' product.pk %}">Добавить в корзину</a><br>
+                    <a href="{% url 'basket:delete' product.pk %}">Убрать из корзины</a>
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

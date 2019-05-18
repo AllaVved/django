@@ -1,0 +1,14 @@
+{% extends 'mainapp/base.html' %}
+
+
+{% block title %}
+    <title>Продукты</title>
+{% endblock %}
+ 
+{% block content %}
+    {% include 'mainapp/includes/inc_category_menu.html' %}
+    <h1>Продукты</h1>
+    <div>Количество продуктов в корзине: {{ basket_qantity }}</div>
+    {% include 'mainapp/includes/inc_products_menu.html' %}
+
+{% endblock %}
