@@ -1,0 +1,31 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% load custom_tags %}
+
+{% block content %}
+  <div class="details">
+    <div class="links clearfix">
+      {% include 'mainapp/includes/inc_category_menu.html' %}
+    </div>
+      <div>Количество продуктов в корзине: {{ request.user|basket_total_quantity }}</div>
+    <div>Общая стоймость корзины: {{ request.user|basket_total_cost }}</div>
+
+    <div class="details-products">
+      <div class="description">
+        <h3 class="big-bold">{{ product.name }}</h3>
+        <br>
+        <p class="price"> {{ product.price }} <span>руб</span></p>
+        <a href="{% url 'basket:add' product.pk %}" class="red-button">
+          заказать
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+        <div class="description-text">
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="clr"></div>
+{% endblock %}

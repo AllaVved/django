@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+{% load custom_tags %}
+
+
+{% block title %}
+    <title>Продукты</title>
+{% endblock %}
+ 
+{% block content %}
+    {% include 'mainapp/includes/inc_category_menu.html' %}
+    <h1>Продукты</h1>
+    <div>Количество продуктов в корзине: {{ request.user|basket_total_quantity }}</div>
+    <div>Общая стоймость корзины: {{ request.user|basket_total_cost }}</div>
+    {% include 'mainapp/includes/inc_products_menu.html' %}
+
+{% endblock %}
