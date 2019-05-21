@@ -1,0 +1,24 @@
+{% extends 'mainapp/base.html' %}
+{% load custom_tags %}
+
+
+{% block title %}
+    <title>Продукты</title>
+{% endblock %}
+ 
+
+{% block content %}
+    {% include 'mainapp/includes/inc_category_menu.html' %}
+    <h1>Продукты</h1>
+    <div>Количество продуктов в корзине: {{ request.user|basket_total_quantity }}</div>
+    <div>Общая стоимость корзины: {{ request.user|basket_total_cost }}</div>
+    <div style="margin: 20px; width: 18rem;">
+        <h1 style="color: red;">ГОРЯЧЕЕ ПРЕДЛОЖЕНИЕ</h1>
+        <div style="color: red;">На складе осталось 2 товара. Спешите!!!!!!!</div>
+        <h3>{{ hot_product.name }}</h3>
+        <p>{{ hot_product.short_desc }}</p>
+        <a href="{% url 'basket:add' hot_product.pk %}">Добавить в корзину</a>
+        <br>
+        <a href="{% url 'basket:delete' hot_product.pk %}">Убрать из корзины</a>
+    </div>
+{% endblock %}

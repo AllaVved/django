@@ -1,0 +1,13 @@
+<ul class="products_menu">
+    {% for product in products %}
+        <li>
+            <a href="#">
+                <div>
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.short_desc }}</p>
+                    <a href="{% url 'products:product' product.pk %}">Смотреть подробней</a>
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
